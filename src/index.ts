@@ -164,7 +164,15 @@ function cleanWikitext(s: string): string {
     .trim();
 }
 
+// SSRF guard: `lang` is caller-supplied and interpolated into the host, so a
+// value like "evil.com/" would point the fetch at evil.com. Wikiquote language
+// codes are bare labels (en, zh-yue, …).
+function assertLang(lang: string): void {
+  if (!/^[a-z0-9-]{1,32}$/i.test(lang)) throw new Error(`Wikiquote: invalid lang "${lang}".`);
+}
+
 async function wikiRest(lang: string, path: string) {
+  assertLang(lang);
   const url = `https://${lang}.wikiquote.org/api/rest_v1${path}`;
   const res = await fetch(url, {
     headers: { Accept: 'application/json', 'User-Agent': UA },
@@ -178,6 +186,7 @@ async function wikiRest(lang: string, path: string) {
 }
 
 async function wikiAction(lang: string, params: Record<string, string>) {
+  assertLang(lang);
   const url = `https://${lang}.wikiquote.org/w/api.php?${new URLSearchParams(params)}`;
   const res = await fetch(url, {
     headers: { Accept: 'application/json', 'User-Agent': UA },
