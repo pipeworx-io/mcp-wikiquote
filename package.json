@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-wikiquote",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Wikiquote MCP — sourced quotations",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-wikiquote": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "wikiquote"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-wikiquote"
+    "url": "git+https://github.com/pipeworx-io/mcp-wikiquote.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-be0f527d6a700436c2111462a2949f6fff0baec42ebcef6c77e59ec0cce113ce",
+    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
   }
 }
