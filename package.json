@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-wikiquote",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Wikiquote MCP — sourced quotations",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-be0f527d6a700436c2111462a2949f6fff0baec42ebcef6c77e59ec0cce113ce",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-05bcde9aede1365ab463546ee83aadfd8e6d4d1e8039ee5c775a0657a160424a",
+    "sourceCommit": "2cb50b368da3267446f2b6f6a3ddbd3d0eed3d73"
   }
 }
