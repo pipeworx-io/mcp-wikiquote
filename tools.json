@@ -1,0 +1,76 @@
+[
+  {
+    "name": "search",
+    "description": "Wikiquote title + fulltext search.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number",
+          "description": "1-50 (default 10)"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "summary",
+    "description": "Page summary.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ]
+    }
+  },
+  {
+    "name": "quotes",
+    "description": "Extract sourced quotation items from a page.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max quotes returned (default 50)"
+        }
+      },
+      "required": [
+        "title"
+      ]
+    }
+  },
+  {
+    "name": "quote_of_the_day",
+    "description": "Daily featured quote (English Wikiquote — `lang=fr` returns its locale equivalent where available).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "lang": {
+          "type": "string"
+        }
+      }
+    }
+  }
+]
