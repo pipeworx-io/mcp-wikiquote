@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-wikiquote",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Wikiquote MCP — sourced quotations",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "wikiquote",
     "gatewaySlug": "wikiquote",
-    "sourceHash": "v1-53c1438f40538cbe1975b5c5e571c5975233af6d2d8fdc749b8ef13aa67eb20b",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-fe979a5fee9955b0e0770d9b7ac1fd7758070a28202a57b6e1681bd17e469ca5",
+    "sourceCommit": "78b905fa3a6880dfb85c79150f4bffe8cf50ef00"
   }
 }
